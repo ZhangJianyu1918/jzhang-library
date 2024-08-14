@@ -1,17 +1,17 @@
 <template>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-8 offset-md-2 col-sm-8 offset-sm-2">
                 <h1 class="text-center">User Information Form</h1>
                 <form @submit.prevent="submitForm">
                     <div class="row mb-3">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6">
                             <label for="username" class="form-label">Username:</label><br>
                             <input type="text" id="username" class="form-control" @blur="() => validateName(true)"
                                 @input="() => validateName(false)" v-model="formData.username"><br>
                             <div v-if="errors.username" class="text-danger">{{ errors.username }}</div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6">
                             <label for="password" class="form-label">Password:</label><br>
                             <input type="password" id="password" name="password" class="form-control"
                                 @blur="() => validatePassword(true)" @input="() => validatePassword(false)"
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6">
                             <div class="form-check">
                                 <input type="checkbox" id="isAustralian" name="isAustralian" class="form-check-input"
                                     v-model="formData.isAustralian"><br>
@@ -29,7 +29,7 @@
                                 <div v-if="errors.resident" class="text-danger">{{ errors.resident }}</div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6">
                             <label for="gender" class="form-label">Gender</label><br>
                             <select id="gender" class="form-select" @blur="() => validateGender(true)"
                                 @input="() => validateGender(false)" v-model="formData.gender">
